@@ -1,0 +1,44 @@
+/* GLOBAL CSS FILE */
+
+  /* Global Colors */
+  :root {
+    --main-primary: #FFFFFF;
+    --main-secondary: #000000;
+    --main-green: #c1e1c1;
+    --main-gray: rgb(245, 245, 245);
+    --main-midgray: rgb(155, 155, 155);
+    --main-darkgray: rgb(85, 85, 85);
+    --main-error: #ff0000;
+    --main-maroon: #de1738;
+    --main-logo: #91b391;
+    --main-sell: rgba(255, 172, 168, 0.3);
+    --main-buy: rgba(193, 225, 193, 0.3);
+    --main-positive: #499649;
+    --main-negative: #de1738;
+  }
+
+  /* Loading Spinner: 100% Viewport */
+  .spinContainer {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+    padding: 40vh 50vw;
+  }
+
+  /* Bootstrap Table Highlights */
+  .bg-red {
+    background-color: var(--main-sell);
+  }
+
+  .bg-green {
+    background-color: var(--main-buy);
+  }
+
+  .negative {
+    color: var(--main-negative)
+  }
+
+  .positive {
+    color: var(--main-positive)
+  }
