@@ -77,7 +77,7 @@ router.post("/", checkAuth, async (req, res) => {
                 sub_expiry: subExpiryDate,
             },
             errors: [],
-            url: "http://localhost:3000/account",
+            url: "https://tradewise-demo.netlify.app/account",
         })
     }
 
@@ -89,7 +89,7 @@ router.post("/", checkAuth, async (req, res) => {
             sub_expiry: subExpiryDate,
         },
         errors: [],
-        url: "http://localhost:3000/account",
+        url: "https://tradewise-demo.netlify.app/account",
     })
 
 });

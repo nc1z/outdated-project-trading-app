@@ -71,7 +71,7 @@ const Ticket = () => {
 
     try {
       const { data: response } = await axios.post(
-        "http://localhost:8080/track/update",
+        "https://tradewise-demo.herokuapp.com/track/update",
         {
           asset,
           order,

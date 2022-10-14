@@ -109,7 +109,7 @@ const Account = () => {
   // Fetch user account subscription details
   const fetchAccount = async () => {
     const { data: response } = await axios.get(
-      "http://localhost:8080/accounts"
+      "https://tradewise-demo.herokuapp.com/accounts"
     );
     if (response.data && response.data.sub_status) {
       setAccount({
@@ -137,9 +137,12 @@ const Account = () => {
   const handleUnsubscribe = async () => {
     setWarning(false);
     setLoading(true);
-    const { data: res } = await axios.post("http://localhost:8080/unsub", {
-      email: user.data?.email,
-    });
+    const { data: res } = await axios.post(
+      "https://tradewise-demo.herokuapp.com/unsub",
+      {
+        email: user.data?.email,
+      }
+    );
 
     if (!Array.isArray(res.errors)) {
       setLoading(false);

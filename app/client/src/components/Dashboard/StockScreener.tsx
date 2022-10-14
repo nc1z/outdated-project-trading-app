@@ -112,7 +112,7 @@ const StockScreener = () => {
   const fetchStocks = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/alp/screener"
+        "https://tradewise-demo.herokuapp.com/market-data/alp/screener"
       );
 
       if (response.data) {

@@ -157,7 +157,7 @@ const TrackerDashboard = () => {
   const fetchPortfolio = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/track/get"
+        "https://tradewise-demo.herokuapp.com/track/get"
       );
 
       if (response.data) {
@@ -175,7 +175,7 @@ const TrackerDashboard = () => {
   const fetchPrices = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/ftx/markets"
+        "https://tradewise-demo.herokuapp.com/market-data/ftx/markets"
       );
 
       if (response.data) {

@@ -33,7 +33,9 @@ export const UserProvider = ({ children }: any) => {
 
   // Function to fetch response from Middleware (If pass we'll get a response to update state)
   const fetchUser = async () => {
-    const { data: response } = await axios.get("http://localhost:8080/auth/me");
+    const { data: response } = await axios.get(
+      "https://tradewise-demo.herokuapp.com/auth/me"
+    );
 
     // If data exists, update User state, else Error
     if (response.data && response.data.user) {

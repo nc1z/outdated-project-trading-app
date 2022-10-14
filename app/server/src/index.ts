@@ -10,6 +10,7 @@ import trackRoutes from "./routes/track";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
+import path from "path";
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ mongoose.connect(
 .then(() => {
     console.log("Connected to mongodb");
 
+    const PORT = process.env.PORT || 8080;
     const app = express();
 
     app.use(express.json());
@@ -31,9 +33,15 @@ mongoose.connect(
     app.use("/market-data", marketDataRoutes);
     app.use("/analysis", analysisRoutes);
     app.use("/track", trackRoutes);
+    
+    app.use(express.static(path.join(__dirname, 'build')));
 
-    app.listen(8080, () => {
-        console.log(`Now listening to port 8080`);
+    app.get('/*', function(req,res) {
+        res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    });
+
+    app.listen(PORT, () => {
+        console.log(`Now listening to port ${PORT}`);
     });
     
 })

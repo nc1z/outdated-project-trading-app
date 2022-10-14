@@ -71,7 +71,7 @@ const TopCoins = () => {
   const fetchCoins = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/cg/trend"
+        "https://tradewise-demo.herokuapp.com/market-data/cg/trend"
       );
 
       if (response.data) {

@@ -20,7 +20,9 @@ export const PlanProvider = ({ children }: any) => {
   const token = localStorage.getItem("token");
 
   const fetchPlan = async () => {
-    const { data: response } = await axios.get("http://localhost:8080/plan");
+    const { data: response } = await axios.get(
+      "https://tradewise-demo.herokuapp.com/plan"
+    );
     if (response) {
       setCurrentPlan({
         plan: response,

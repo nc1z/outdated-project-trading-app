@@ -65,7 +65,7 @@ const BnLevelTwo = () => {
   const fetchSnapshot = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/bn/depth"
+        "https://tradewise-demo.herokuapp.com/market-data/bn/depth"
       );
 
       if (response.data) {
@@ -83,7 +83,7 @@ const BnLevelTwo = () => {
   const fetchTape = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/bn/tape"
+        "https://tradewise-demo.herokuapp.com/market-data/bn/tape"
       );
 
       if (response.data) {

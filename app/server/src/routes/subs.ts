@@ -46,8 +46,8 @@ router.post("/session", checkAuth, async (req, res) => {
                     quantity: 1
                 }
             ],
-            success_url: "http://localhost:3000/dashboard",
-            cancel_url: "http://localhost:3000/plans",
+            success_url: "https://tradewise-demo.netlify.app/dashboard",
+            cancel_url: "https://tradewise-demo.netlify.app/plans",
             customer: user.customerStripeId,
         }, {
             apiKey: process.env.STRIPE_SECRET_KEY
@@ -92,7 +92,7 @@ router.post("/session", checkAuth, async (req, res) => {
             current_plan: plan,
         },
         errors: [],
-        url: "http://localhost:3000/dashboard",
+        url: "https://tradewise-demo.netlify.app/dashboard",
     });
 
 

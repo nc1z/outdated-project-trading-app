@@ -10,7 +10,8 @@ const sentiment = new Sentiment()
 router.get("/r/stocks", checkAuth, async (req, res) => {
 
 const sentimentData = async () => {
-    const browser = await puppeteer.launch();
+    
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(0); 
     let scrapedText = ""
@@ -42,7 +43,15 @@ const sentimentData = async () => {
     })
 };
 
-sentimentData()
+try {
+    sentimentData()
+} catch (error: any) {
+    console.log(error.message)
+    return res.json({
+        data: "",
+        errors: error.message
+    })
+}
 
 });
 
@@ -50,7 +59,7 @@ sentimentData()
 router.get("/r/investing", checkAuth, async (req, res) => {
 
 const sentimentData = async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(0); 
     let scrapedText = ""
@@ -82,7 +91,15 @@ const sentimentData = async () => {
     })
 };
 
-sentimentData()
+try {
+    sentimentData()
+} catch (error: any) {
+    console.log(error.message)
+    return res.json({
+        data: "",
+        errors: error.message
+    })
+}
 
 });
 
@@ -90,7 +107,7 @@ sentimentData()
 router.get("/r/cryptomarkets", checkAuth, async (req, res) => {
 
 const sentimentData = async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(0); 
     let scrapedText = ""
@@ -122,7 +139,15 @@ const sentimentData = async () => {
     })
 };
 
-sentimentData()
+try {
+    sentimentData()
+} catch (error: any) {
+    console.log(error.message)
+    return res.json({
+        data: "",
+        errors: error.message
+    })
+}
 
 });
 

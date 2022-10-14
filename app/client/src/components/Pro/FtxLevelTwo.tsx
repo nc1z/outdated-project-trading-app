@@ -66,7 +66,7 @@ const FtxLevelTwo = () => {
   const fetchSnapshot = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/ftx/depth"
+        "https://tradewise-demo.herokuapp.com/market-data/ftx/depth"
       );
 
       if (response.data) {
@@ -84,7 +84,7 @@ const FtxLevelTwo = () => {
   const fetchTape = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/ftx/tape"
+        "https://tradewise-demo.herokuapp.com/market-data/ftx/tape"
       );
 
       if (response.data) {

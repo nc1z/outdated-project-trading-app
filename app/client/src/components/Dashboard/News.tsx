@@ -205,7 +205,7 @@ const News = () => {
   const fetchNews = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/alp/news"
+        "https://tradewise-demo.herokuapp.com/market-data/alp/news"
       );
 
       if (response.data) {

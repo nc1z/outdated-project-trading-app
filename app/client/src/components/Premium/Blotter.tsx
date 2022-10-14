@@ -77,7 +77,7 @@ const Blotter = () => {
   const fetchDetails = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/track/get"
+        "https://tradewise-demo.herokuapp.com/track/get"
       );
 
       if (response.data) {

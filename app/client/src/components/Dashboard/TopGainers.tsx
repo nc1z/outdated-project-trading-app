@@ -91,7 +91,7 @@ const TopGainers = () => {
   const fetchCoins = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/cg/price-change"
+        "https://tradewise-demo.herokuapp.com/market-data/cg/price-change"
       );
 
       if (response.data) {

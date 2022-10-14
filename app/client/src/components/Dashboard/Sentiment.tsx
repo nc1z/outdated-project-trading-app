@@ -145,7 +145,7 @@ const Sentiment = () => {
 
     try {
       const { data: response } = await axios.get(
-        `http://localhost:8080/analysis/r/${subreddit}`
+        `https://tradewise-demo.herokuapp.com/analysis/r/${subreddit}`
       );
 
       if (response.data) {

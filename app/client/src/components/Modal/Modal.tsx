@@ -81,7 +81,7 @@ const ModalComponent = ({ text, isSignupFlow }: ModalProps) => {
     let response;
     if (isSignupFlow) {
       const { data: signUpData } = await axios.post(
-        "http://localhost:8080/auth/signup",
+        "https://tradewise-demo.herokuapp.com/auth/signup",
         {
           email,
           password,
@@ -90,7 +90,7 @@ const ModalComponent = ({ text, isSignupFlow }: ModalProps) => {
       response = signUpData;
     } else {
       const { data: loginData } = await axios.post(
-        "http://localhost:8080/auth/login",
+        "https://tradewise-demo.herokuapp.com/auth/login",
         {
           email,
           password,
@@ -122,7 +122,9 @@ const ModalComponent = ({ text, isSignupFlow }: ModalProps) => {
     ] = `Bearer ${response.data.token}`;
 
     // Set Plan State on successful login/signup
-    const { data: res } = await axios.get("http://localhost:8080/plan");
+    const { data: res } = await axios.get(
+      "https://tradewise-demo.herokuapp.com/plan"
+    );
     if (res) {
       setCurrentPlan({
         plan: res,

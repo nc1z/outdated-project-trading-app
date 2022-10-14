@@ -166,7 +166,7 @@ router.get("/cg/trend", checkAuth, async (req, res) => {
 
 router.get("/cg/price-change", checkAuth, async (req, res) => {
      try {
-         const { data: response } = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=%20volume_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h")
+         const { data: response } = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=%20volume_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h")
          if(response){
              return res.json({
                  data: response,

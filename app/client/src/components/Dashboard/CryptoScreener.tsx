@@ -108,7 +108,7 @@ const CryptoScreener = () => {
   const fetchCoins = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/cg/screener"
+        "https://tradewise-demo.herokuapp.com/market-data/cg/screener"
       );
 
       if (response.data) {

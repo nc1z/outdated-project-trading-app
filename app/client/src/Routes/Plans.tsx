@@ -196,7 +196,7 @@ const Plans = () => {
   // Make HTTP request to /prices to get product data & pricing, then store in state
   const fetchPrices = async () => {
     const { data: response } = await axios.get(
-      "http://localhost:8080/subs/prices"
+      "https://tradewise-demo.herokuapp.com/subs/prices"
     );
     setPrices(response.data);
   };
@@ -206,7 +206,7 @@ const Plans = () => {
   const createSession = async (priceId: string) => {
     setLoading(true);
     const { data: response } = await axios.post(
-      "http://localhost:8080/subs/session",
+      "https://tradewise-demo.herokuapp.com/subs/session",
       {
         priceId,
       }

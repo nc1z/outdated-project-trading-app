@@ -91,7 +91,7 @@ const TopVolume = () => {
   const fetchCoins = async () => {
     try {
       const { data: response } = await axios.get(
-        "http://localhost:8080/market-data/cg/volume"
+        "https://tradewise-demo.herokuapp.com/market-data/cg/volume"
       );
 
       if (response.data) {
