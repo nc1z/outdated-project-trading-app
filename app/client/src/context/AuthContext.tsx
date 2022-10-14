@@ -66,6 +66,7 @@ export const UserProvider = ({ children }: any) => {
         error: null,
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

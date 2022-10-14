@@ -85,8 +85,8 @@ const TrackerDashboard = () => {
   const [portfolio, setPortfolio] = useState<any>({});
   const [priceBTC, setPriceBTC] = useState<any>({});
   const [priceETH, setPriceETH] = useState<any>({});
-  const [dataset, setDataset] = useState<any>([]);
-  const [timeLabels, setTimeLabels] = useState<any>([]);
+  const [dataset] = useState<any>([]);
+  const [timeLabels] = useState<any>([]);
   let pricesIntervalRef = useRef<NodeJS.Timer>();
 
   // Portfolio calculations
@@ -115,6 +115,7 @@ const TrackerDashboard = () => {
       dataset.push(total);
       timeLabels.push(moment().format("LTS"));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [total]);
 
   while (dataset.length > 7) {

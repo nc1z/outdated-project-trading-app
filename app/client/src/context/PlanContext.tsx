@@ -38,6 +38,7 @@ export const PlanProvider = ({ children }: any) => {
         loading: false,
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -30,7 +30,7 @@ const PaidRoute = ({ plan }: PlanProps) => {
   ) {
     return state.data ? <Outlet /> : <Navigate to="/" />;
   } else {
-    return state.data ? <Navigate to="/dashboard" /> : <Navigate to="/" />;
+    return state.data ? <Navigate to="/account" /> : <Navigate to="/" />;
   }
 };
 

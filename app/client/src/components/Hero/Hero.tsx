@@ -14,9 +14,19 @@ const HeroComponent = styled.header`
     height: 50vh;
   }
 
+  @media (max-width: 540px) {
+    padding: 0;
+    height: 60vh;
+  }
+
   @media (max-width: 431px) {
     padding: 0;
     height: 60vh;
+  }
+
+  @media (max-width: 380px) {
+    padding: 0;
+    height: 75vh;
   }
 `;
 
