@@ -94,7 +94,7 @@ There are many aggregated market data services out there, but many either lack c
 - [ ] Improve Code / Refactor
     - [ ] Work on TS declarations
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/nc1z/tradewise-mern-demo/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
